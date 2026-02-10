@@ -2,6 +2,7 @@ import { Github, Mail, Linkedin, ExternalLink, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import textureRed from '../assets/backgrounds/redbackground.jpeg?url';
 import { projectsData } from '../data/projects';
+import { articles } from '../data/articles';
 
 export default function Home() {
   return (
@@ -147,22 +148,23 @@ export default function Home() {
             <div className="bg-[#250902] border-4 border-[#ffb703] p-8 hover:border-[#8ecae6] transition-colors">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl text-[#ffb703] mb-2" style={{ fontFamily: 'Georgia, serif' }}>d</h3>
-                  <p className="text-xl text-[#8ecae6] mb-3">Robotics Engineer</p>
+                  <h3 className="text-2xl text-[#ffb703] mb-1" style={{ fontFamily: 'Georgia, serif' }}>Design and Innovation Lab SWE</h3>
+                  <p className="text-sm text-[#ffb703] mb-3" style={{ fontFamily: 'Georgia, serif' }}>Oct 2025 - Present</p>
+                  <p className="text-xl text-[#8ecae6] mb-3">Software Engineer</p>
                 </div>
               </div>
               <ul className="space-y-2 text-white/90">
                 <li className="flex gap-3">
                   <span className="text-[#ffb703] mt-1">•</span>
-                  <span>Built ACT based learning pipeline for 14 DoF  using teleoperation data and transformer policy inference</span>
+                  <span>Built full stack dashboard for 3D print queue management using React and internal tooling</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#ffb703] mt-1">•</span>
-                  <span>n stack</span>
+                  <span>Translated user needs into software features and maintained Git based development workflow</span>
                 </li>
               </ul>
               <div className="flex flex-wrap gap-2 mt-6">
-                {['Python', 'ROS', 'Machine Learning', 'Robotics', 'Transformers'].map((tech) => (
+                {['React', 'Full Stack', 'Git', 'Dashboard Development'].map((tech) => (
                   <span key={tech} className="text-xs px-3 py-1 bg-[#8ecae6]/20 text-[#8ecae6] border border-[#8ecae6]/40 rounded-full">
                     {tech}
                   </span>
@@ -174,7 +176,8 @@ export default function Home() {
             <div className="bg-[#250902] border-4 border-[#ffb703] p-8 hover:border-[#8ecae6] transition-colors">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl text-[#ffb703] mb-2" style={{ fontFamily: 'Georgia, serif' }}>Amazon AWS Software Engineering Intern</h3>
+                  <h3 className="text-2xl text-[#ffb703] mb-1" style={{ fontFamily: 'Georgia, serif' }}>Amazon AWS Software Engineering Intern</h3>
+                  <p className="text-sm text-[#ffb703] mb-3" style={{ fontFamily: 'Georgia, serif' }}>May - September 2026</p>
                   <p className="text-xl text-[#8ecae6] mb-3">Software Engineering Intern</p>
                 </div>
               </div>
@@ -201,22 +204,23 @@ export default function Home() {
             <div className="bg-[#250902] border-4 border-[#ffb703] p-8 hover:border-[#8ecae6] transition-colors">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl text-[#ffb703] mb-2" style={{ fontFamily: 'Georgia, serif' }}>Design and Innovation Lab SWE</h3>
-                  <p className="text-xl text-[#8ecae6] mb-3">Software Engineer</p>
+                  <h3 className="text-2xl text-[#ffb703] mb-1" style={{ fontFamily: 'Georgia, serif' }}>Wisconsin Humanoids</h3>
+                  <p className="text-sm text-[#ffb703] mb-3" style={{ fontFamily: 'Georgia, serif' }}>Oct 2025 - Present</p>
+                  <p className="text-xl text-[#8ecae6] mb-3">AlohaMini project</p>
                 </div>
               </div>
               <ul className="space-y-2 text-white/90">
                 <li className="flex gap-3">
                   <span className="text-[#ffb703] mt-1">•</span>
-                  <span>Built full stack dashboard for 3D print queue management using React and internal tooling</span>
+                  <span>Contribute to the AlohaMini humanoid project with work on teleoperation, data collection, and system integration</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#ffb703] mt-1">•</span>
-                  <span>Translated user needs into software features and maintained Git based development workflow</span>
+                  <span>Present research and demonstrations at campus expos to showcase learning-based manipulation and motion control</span>
                 </li>
               </ul>
               <div className="flex flex-wrap gap-2 mt-6">
-                {['React', 'Full Stack', 'Git', 'Dashboard Development'].map((tech) => (
+                {['Python', 'ROS', 'Machine Learning', 'Robotics', 'Transformers'].map((tech) => (
                   <span key={tech} className="text-xs px-3 py-1 bg-[#8ecae6]/20 text-[#8ecae6] border border-[#8ecae6]/40 rounded-full">
                     {tech}
                   </span>
@@ -244,43 +248,66 @@ export default function Home() {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {projectsData.map((project) => (
-              <Link 
-                key={project.id}
-                to={`/project/${project.id}`}
-                className="group border-4 border-[#640d14] rounded-lg overflow-hidden hover:shadow-2xl hover:border-[#fb8500] transition-all duration-300 bg-white"
-              >
-                {/* Empty Placeholder */}
-                <div className="relative h-64 bg-gradient-to-br from-[#219ebc] to-[#023047] flex items-center justify-center border-b-4 border-[#640d14]">
-                  <div className="text-[#8ecae6]/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-4 right-4 text-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity">
-                    <ExternalLink className="w-6 h-6" />
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-2xl mb-3 text-[#640d14] group-hover:text-[#fb8500] transition-colors" style={{ fontFamily: 'Georgia, serif' }}>{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="text-xs px-3 py-1 bg-[#8ecae6]/20 text-[#023047] border border-[#219ebc] rounded-full">
-                        {tag}
-                      </span>
-                    ))}
+            {projectsData.map((project, idx) => {
+              const isActive = idx === 0;
+              const cardClasses = isActive
+                ? 'group border-4 border-[#640d14] rounded-lg overflow-hidden hover:shadow-2xl hover:border-[#fb8500] transition-all duration-300 bg-white'
+                : 'border-4 border-[#640d14] rounded-lg overflow-hidden bg-white opacity-70';
+
+              const cardContent = (
+                <>
+                  {/* Empty Placeholder */}
+                  <div className="relative h-64 bg-gradient-to-br from-[#219ebc] to-[#023047] flex items-center justify-center border-b-4 border-[#640d14]">
+                    <div className="text-[#8ecae6]/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    {isActive && (
+                      <div className="absolute top-4 right-4 text-[#ffb703] opacity-0 group-hover:opacity-100 transition-opacity">
+                        <ExternalLink className="w-6 h-6" />
+                      </div>
+                    )}
                   </div>
                   
-                  <div className="text-sm text-[#640d14] group-hover:text-[#fb8500] transition-colors flex items-center gap-2">
-                    <span>Read more</span>
-                    <ExternalLink className="w-4 h-4" />
+                  <div className="p-6">
+                    <h3 className="text-2xl mb-3 text-[#640d14] group-hover:text-[#fb8500] transition-colors" style={{ fontFamily: 'Georgia, serif' }}>
+                      {isActive ? project.title : 'Coming soon'}
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      {isActive ? project.description : 'More projects are on the way.'}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="text-xs px-3 py-1 bg-[#8ecae6]/20 text-[#023047] border border-[#219ebc] rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    {isActive ? (
+                      <div className="text-sm text-[#640d14] group-hover:text-[#fb8500] transition-colors flex items-center gap-2">
+                        <span>Read more</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </div>
+                    ) : (
+                      <div className="text-sm text-[#640d14]">Not available yet</div>
+                    )}
                   </div>
+                </>
+              );
+
+              return isActive ? (
+                <Link key={project.id} to={`/project/${project.id}`} className={cardClasses}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={project.id} className={cardClasses}>
+                  {cardContent}
                 </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -311,46 +338,42 @@ export default function Home() {
           </h2>
           
           <div className="space-y-6">
-            {[
-              {
-                title: 'Lorem Ipsum Dolor Sit Amet Consectetur',
-                date: 'February 3, 2026',
-                excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                readTime: '8 min read'
-              },
-              {
-                title: 'Ut Enim Ad Minim Veniam Quis Nostrud',
-                date: 'January 18, 2026',
-                excerpt: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                readTime: '12 min read'
-              },
-              {
-                title: 'Duis Aute Irure Dolor in Reprehenderit',
-                date: 'December 29, 2025',
-                excerpt: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-                readTime: '6 min read'
-              },
-              {
-                title: 'Excepteur Sint Occaecat Cupidatat Non Proident',
-                date: 'December 12, 2025',
-                excerpt: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-                readTime: '10 min read'
-              }
-            ].map((article, idx) => (
-              <article 
-                key={idx}
-                className="bg-[#023047] p-8 border-4 border-[#ffb703] hover:border-[#fb8500] hover:bg-[#023047]/90 transition-all cursor-pointer group"
-              >
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-2xl text-[#8ecae6] group-hover:text-[#ffb703] transition-colors" style={{ fontFamily: 'Georgia, serif' }}>
-                    {article.title}
-                  </h3>
-                  <ExternalLink className="w-5 h-5 text-[#ffb703] group-hover:text-[#fb8500] transition-colors flex-shrink-0 ml-4" />
-                </div>
-                <p className="text-sm text-[#8ecae6]/70 mb-3">{article.date} · {article.readTime}</p>
-                <p className="text-white/90">{article.excerpt}</p>
-              </article>
-            ))}
+            {articles.map((article, idx) => {
+              const isActive = idx === 0;
+              const articleContent = (
+                <>
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-2xl text-[#8ecae6] group-hover:text-[#ffb703] transition-colors" style={{ fontFamily: 'Georgia, serif' }}>
+                      {isActive ? article.title : 'Coming soon'}
+                    </h3>
+                    {isActive && (
+                      <ExternalLink className="w-5 h-5 text-[#ffb703] group-hover:text-[#fb8500] transition-colors flex-shrink-0 ml-4" />
+                    )}
+                  </div>
+                  <p className="text-sm text-[#8ecae6]/70 mb-3">{article.date} · {article.readTime}</p>
+                  <p className="text-white/90">
+                    {isActive ? article.excerpt : 'More articles are on the way.'}
+                  </p>
+                </>
+              );
+
+              return isActive ? (
+                <Link
+                  key={article.id}
+                  to={`/articles/${article.id}`}
+                  className="bg-[#023047] p-8 border-4 border-[#ffb703] hover:border-[#fb8500] hover:bg-[#023047]/90 transition-all cursor-pointer group block"
+                >
+                  {articleContent}
+                </Link>
+              ) : (
+                <article
+                  key={article.id}
+                  className="bg-[#023047] p-8 border-4 border-[#ffb703] opacity-70"
+                >
+                  {articleContent}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -449,12 +472,16 @@ export default function Home() {
                   <Star className="w-6 h-6 text-[#ffb703]" strokeWidth={1} />
                   <span className="text-sm text-[#8ecae6] uppercase tracking-wider">Currently</span>
                 </div>
-                <p className="text-lg mb-6 text-white">
-                  Seeking full-time Software Engineering opportunities for Summer 2026
+                <p className="text-lg mb-4 text-white">
+                  Full time student at UW Madison
                 </p>
                 <div className="text-sm text-white/80">
-                  <p>Based in Madison, Wisconsin</p>
-                  <p className="mt-1">Open to remote opportunities</p>
+                  <p className="mb-2">Current classes:</p>
+                  <ul className="space-y-1">
+                    <li>CS 300: Data Structures and Programming</li>
+                    <li>CS 252: Computer Engineering I</li>
+                    <li>STAT 240: Programming in R and Data Statistics</li>
+                  </ul>
                 </div>
               </div>
             </div>
