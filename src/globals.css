@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream: #f5f1e8;
+  --dark: #0a0a0a;
+  --mahogany: #250902;
+  --mahogany-2: #38040e;
+  --black-cherry: #640d14;
+  --dark-wine: #800e13;
+  --brown-red: #ad2831;
+  --sky-blue: #8ecae6;
+  --ocean-blue: #219ebc;
+  --navy: #023047;
+  --orange: #ffb703;
+  --bright-orange: #fb8500;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+}
