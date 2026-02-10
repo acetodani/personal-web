@@ -1,129 +1,81 @@
-# Portfolio Website - Vite React
+## Overview
 
-A modern, fast portfolio website built with Vite, React, TypeScript, and Tailwind CSS.
+This site presents my projects and experience as a UW Madison Computer Science student, including:
 
-## Features
+* Software development for the Design Innovation Lab
+* Humanoid robotics research with Wisconsin Robotics and AlohaMini
+* Web tools and automation projects
+* Fabrication and 3D printing workflow systems
 
-- ⚡️ **Vite** - Next generation frontend tooling
-- ⚛️ **React 18** - Modern UI library
-- 🎨 **Tailwind CSS** - Utility-first CSS framework
-- 📝 **TypeScript** - Type-safe development
-- 🚀 **Fast development server** with Hot Module Replacement (HMR)
-- 🔧 **Pre-configured** with all necessary tools
+## Tech Stack
+
+* Vite
+* React 18
+* TypeScript
+* Tailwind CSS
+* Lucide React
 
 ## Project Structure
 
-```
+```text
 src/
-├── App.tsx           # Main application component
-├── main.tsx          # Application entry point
-├── globals.css       # Global styles
-├── ui/              # Reusable UI components
-└── figma/           # Figma-related components
+├── App.tsx        Main application
+├── main.tsx       Entry point
+├── globals.css    Global styles
+├── ui/            Reusable UI components
+└── figma/         Design based components
 ```
 
-## Getting Started
+## Development
 
-### Prerequisites
+**Install**
 
-- Node.js (v16 or higher)
-- npm or yarn
+```bash
+npm install
+```
 
-### Installation
+**Run locally**
 
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
+```bash
+npm run dev
+```
 
-2. **Start the development server**
-   ```bash
-   npm run dev
-   ```
+Open [http://localhost:5173](http://localhost:5173)
 
-   The application opens automatically at `http://localhost:5173`
-
-### Build for Production
+**Build**
 
 ```bash
 npm run build
 ```
 
-This creates an optimized production build in the `dist/` folder.
-
-### Preview Production Build
+**Preview**
 
 ```bash
 npm run preview
 ```
 
-## Available Scripts
+## Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint
-
-## Technologies Used
-
-- **Vite** - Build tool and dev server
-- **React** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Lucide React** - Icon library
-
-## Customization
-
-### Tailwind Configuration
-
-Edit `tailwind.config.ts` to customize:
-- Colors and themes
-- Typography
-- Spacing and sizing
-- Responsive breakpoints
-
-### Global Styles
-
-Modify `src/globals.css` for:
-- Global variable definitions
-- Base styles
-- Custom font imports
-
-## Component Development
-
-Create new components in the `src/` directory and import them in your pages:
-
-```tsx
-import { MyComponent } from './MyComponent'
-
-export default function App() {
-  return <MyComponent />
-}
-```
+* npm run dev
+* npm run build
+* npm run preview
+* npm run lint
 
 ## Deployment
 
-The project is ready to be deployed to any static hosting service:
+Deploy the dist folder to any static host:
 
-- **Vercel** - Zero-config deployment
-- **Netlify** - Connect your Git repository
-- **GitHub Pages** - Static hosting
-- **AWS S3 + CloudFront** - CDN delivery
+* Vercel
+* Netlify
+* GitHub Pages
+* AWS S3
 
-Build the project first:
-```bash
-npm run build
-```
+## Author
 
-Then deploy the `dist/` folder.
-
-## Learn More
-
-- [Vite Documentation](https://vitejs.dev/)
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/)
-- [TypeScript Documentation](https://www.typescriptlang.org/)
+Dani Almalaki
+Computer Science, UW Madison
+Robotics and fabrication software
 
 ## License
 
-MIT - feel free to use this for personal or commercial projects.
+MIT
