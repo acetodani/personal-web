@@ -1,4 +1,4 @@
-import { Github, Mail, Linkedin, ExternalLink, Star, Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Github, Mail, Linkedin, ExternalLink, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import textureRed from '../assets/backgrounds/redbackground.jpeg?url';
 import { projectsData } from '../data/projects';
