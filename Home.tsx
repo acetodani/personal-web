@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import textureRed from 'figma:asset/569ef15ea2ba0a0a10e3461c70abf5bf2ba23dd5.png';
 import textureBlue from 'figma:asset/088a2ec58b47e979782cb6e0a50c3eb88271d15a.png';
 import textureTeal from 'figma:asset/1250ad19e6ce82c4649c45f06fe1945ebdef3c06.png';
-import { projectsData } from '../data/projects';
+import { projectsData } from './src/data/projects';
 
 export default function Home() {
   return (
@@ -284,7 +284,7 @@ export default function Home() {
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {projectsData.map((project) => (
+            {projectsData.map((project: typeof projectsData[0]) => (
               <Link 
                 key={project.id}
                 to={`/project/${project.id}`}
@@ -307,7 +307,7 @@ export default function Home() {
                   <p className="text-gray-700 mb-4">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag: string) => (
                       <span key={tag} className="text-xs px-3 py-1 bg-[#8ecae6]/20 text-[#023047] border border-[#219ebc] rounded-full">
                         {tag}
                       </span>
